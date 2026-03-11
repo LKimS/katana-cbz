@@ -1,3 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Hatch
+.hatch/
+
+# Env
+.env
+.venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# local test folder
+local_test/
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
