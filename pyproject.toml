@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "katana-cbz"
-version = "0.1.0"
+version = "0.2.0"
 description = "Convert MangaKatana ZIP files to CBZ format"
 requires-python = ">=3.14"
 dependencies = [
