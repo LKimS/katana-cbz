@@ -6,10 +6,10 @@ build-backend = "hatchling.build"
 name = "katana-cbz"
 version = "0.1.0"
 description = "Convert MangaKatana ZIP files to CBZ format"
-requires-python = ">=3.9"
+requires-python = ">=3.14"
 dependencies = [
-    "cyclopts",
-    "rich",
+    "cyclopts==4.9.0",
+    "rich==14.3.3",
 ]
 
 [project.scripts]
@@ -24,7 +24,7 @@ dev-mode-dirs = ["src"]
 [tool.hatch.envs.default]
 path = ".venv"
 dependencies = [
-    "hatch",
-    "tqdm",
-    "ruff",
+    "hatch==1.16.5",
+    "tqdm==4.67.3",
+    "ruff==0.15.6",
 ]
