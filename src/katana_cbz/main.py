@@ -14,12 +14,18 @@ def foo(loops: int):
 @app.command(name=["ls", "list"])
 def ls():
     console = Console()
+    
+    series_list = get_series()
+    if len(series_list) == 0:
+        console.print("[yellow]No series found in the current directory.[/yellow]")
+        return
+    
     table = Table(title="Manga Serie(s)")
     table.add_column("Series", style="cyan")
     table.add_column("Chapters Converted", style="magenta", justify="right")
     table.add_column("Zipped Downloaded", style="magenta", justify="right")
 
-    series_list = get_series()
+    
 
     for index, series in enumerate(series_list, start=1):
         table.add_row(f"({index}) {series.name}", str(len(series.zip_chapters)), series.formatted_chapters)
