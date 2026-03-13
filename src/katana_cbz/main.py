@@ -13,9 +13,9 @@ def foo(loops: int):
 
 @app.command(name=["ls", "list"])
 def ls():
-    console = Console()
-    
     series_list = get_series()
+
+    console = Console()
     if len(series_list) == 0:
         console.print("[yellow]No series found in the current directory.[/yellow]")
         return
